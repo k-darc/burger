@@ -2,7 +2,6 @@
 var connection = require("./connection");
 
 
-
 function printQuestionMarks(num) {
   var arr = [];
 
@@ -12,7 +11,6 @@ function printQuestionMarks(num) {
 
   return arr.toString();
 }
-
 
 // Object for all our SQL statement functions.
 var orm = {
@@ -45,7 +43,6 @@ var orm = {
       cb(result);
     });
   },
-  
   
   updateOne: function(table, condition, cb) {
     var queryString = "UPDATE " + table;
