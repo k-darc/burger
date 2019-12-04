@@ -1,5 +1,5 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
-console.log("loaded");
+window.onload = function() {
 $(".burgerList").on("click", ".change-devoured", function(event) {
     var id = $(this).data("id");
     var updatedState = $(this).data("newdevoured");
@@ -25,7 +25,7 @@ $(".burgerList").on("click", ".change-devoured", function(event) {
   });
 
   $(".create-form").on("submit", function(event) {
-    console.log("CREATING...")
+
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
@@ -46,3 +46,4 @@ $(".burgerList").on("click", ".change-devoured", function(event) {
       }
     );
   });
+}
