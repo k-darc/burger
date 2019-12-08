@@ -1,31 +1,57 @@
-<h1>Eat Da Burger!</h1>
+<div class="container">
+  <div class="jumbotron">
+  </div><!-- end of jumbotron -->
+      <h1 id="color-override">Eat Da Burger!</h1>
 
-<h2>Time to devour a burger! Pick one!</h2>
+      <h2>Time to devour a burger! Pick one!</h2>
 
-<ul class="undevoured burgerList">
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/unless}}
-  {{/each}}
-</ul>
+      <h2>Add a Burger</h2>
+      <panel>
+        <form class="create-form">
+          <div class="form-group">
+            <label for="ca">New Burger Name:</label>
+            <input type="text" id="ca" name="burger_name">
+            <button class="btn-final">Add Burger</button>
+          </div>
+        </form>
+      </panel>
 
-<h2>Devoured!</h2>
 
-<ul class="devoured burgerList">
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/if}}
-  {{/each}}
-</ul>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading" id="lefthead">New Burgers</div>
+      <div class="panel body">
 
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="burger_name">
+    <ul class="undevoured burgerList">
+      {{#each burgers}}
+        {{#unless devoured}}
+         <span> {{> burgers/burger-block devoured=false}} </span>
+         <hr>
+        {{/unless}}
+      {{/each}}
+    </ul>
+    </div>
   </div>
-  <button class="btn-final">Add Burger</button>
-</form>
+</div>
+    
+
+    <h2>Devoured!</h2>
+    <div class="col-sm-6">
+      <div class="panel panel-default">
+         <div class="panel-heading" id="righthead">Devoured Burgers</div>
+          <div class="panel-body">
+
+    <ul class="devoured burgerList">
+      {{#each burgers}}
+        {{#if devoured}}
+          <span>{{> burgers/burger-block devoured=true}}</span>
+        {{/if}}
+      {{/each}}
+    </ul>
+    </div>
+  </div>
+</div>
+</div> <!-- end of container-->
+
+<div class="footer"> K. Darcy | 2019 RCBC</div>

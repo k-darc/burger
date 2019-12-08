@@ -1,0 +1,75 @@
+@import url("/assets/css/reset.css");
+.container {
+    margin-left: 6%;
+    margin-right: 6%;
+}
+
+.jumbotron {
+    background-image: url("/assets/imgs/burge.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    margin-top: 10px;
+    height: 200px;
+}
+
+.jumbotron > h1 {
+    font-family: 'Creepster', cursive;
+}
+
+#newburger {
+    border-radius: 5px;
+}
+
+#color-override {
+    color: rgb(182, 7, 7);
+}
+
+#lefthead {
+    background-color: #5cb85c;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 2px;
+}
+
+#eatbutton, #trashbutton {
+    float: right;
+}
+
+#righthead {
+    background-color: #f0ad4e;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 2px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.footer {
+    border: 1px;
+    border-top-style: solid;
+    text-align: center;
+    color: rgb(54, 54, 54);
+}
+
+@media only screen and (max-width: 1200px){
+    .jumbotron {
+        background-size: 70%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .jumbotron {
+        background-size: 85%;
+    }
+}
+
+@media only screen and (max-width: 640px){
+    .jumbotron {
+        background-size: 110%;
+    }
+}
