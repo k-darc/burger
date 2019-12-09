@@ -15,6 +15,8 @@ Eat da Burger!
 - After installation, in the terminal type: "npm start".
 - Proceed to "localhost:8080" in your web browser's address bar.
 
+Live link - [Burger](https://k-darc.github.io/burger/).
+
 ### How to use?
 1. Type in your desired burger inside the input field, click "Add Burger" to add said burger into the list. 
 
